@@ -66,7 +66,9 @@ HTML_TEMPLATE = """
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.min.js"></script>
     <script>
-        const socket = io();
+        const socket = io({
+            transports: ['websocket', 'polling']
+        });
         let miRol = "El"; // Por defecto
 
         function cambiarRol(rol) {
