@@ -67,7 +67,7 @@ HTML_TEMPLATE = """
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.min.js"></script>
     <script>
         const socket = io({
-            transports: ['websocket', 'polling']
+            transports: ['polling']
         });
         let miRol = "El"; // Por defecto
 
